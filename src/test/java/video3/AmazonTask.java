@@ -13,7 +13,7 @@ public class AmazonTask {
         WebDriverManager.chromedriver().setup();
         WebDriver driver=new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds());
         driver.get("https://www.amazon.com.tr");
         WebElement srch=driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']"));
         srch.sendKeys("Nutella");

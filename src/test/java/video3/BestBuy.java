@@ -15,7 +15,7 @@ public class BestBuy {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+       // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.get("https://www.bestbuy.com");
         List<WebElement> buttonList = driver.findElements(By.tagName("button"));
         System.out.println(buttonList.size());

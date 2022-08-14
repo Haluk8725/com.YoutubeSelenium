@@ -13,7 +13,7 @@ public class DriverManageMethods {
         WebDriverManager.chromedriver().setup();
         WebDriver driver=new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         System.out.println(driver.manage().window().getSize());
         System.out.println(driver.manage().window().getPosition());
         driver.manage().window().setPosition(new Point(15,15));

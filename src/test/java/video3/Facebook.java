@@ -14,7 +14,7 @@ public class Facebook {
         WebDriverManager.chromedriver().setup();
         WebDriver driver=new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+     //   driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.get("https://www.facebook.com");
         WebElement srch=
                 driver.findElement(By.xpath("//input[@class='inputtext _55r1 _6luy']"));
