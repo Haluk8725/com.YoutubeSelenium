@@ -18,7 +18,7 @@ public class CallfriendTExt {
         WebElement username = driver.findElement(By.xpath("//*[@id=\"loginForm\"]/div/div[1]/div/label/input"));
         username.sendKeys("haluk.ural");
         WebElement password = driver.findElement(By.xpath("//*[@id=\"loginForm\"]/div/div[2]/div/label/input"));
-        password.sendKeys("haluk8725.", Keys.ENTER);
+        password.sendKeys("", Keys.ENTER);
         Thread.sleep(5000);
         driver.get("https://www.instagram.com/haluk.ural/");
         Thread.sleep(5000);
