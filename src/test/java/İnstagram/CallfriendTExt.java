@@ -5,10 +5,15 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.List;
+import java.util.Scanner;
 
 public class CallfriendTExt {
 
     public static void main(String[] args) throws InterruptedException {
+        Scanner input=new Scanner(System.in);
+        System.out.println("Please give your password");
+        String password1=input.next();
+
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -18,7 +23,7 @@ public class CallfriendTExt {
         WebElement username = driver.findElement(By.xpath("//*[@id=\"loginForm\"]/div/div[1]/div/label/input"));
         username.sendKeys("haluk.ural");
         WebElement password = driver.findElement(By.xpath("//*[@id=\"loginForm\"]/div/div[2]/div/label/input"));
-        password.sendKeys("", Keys.ENTER);
+        password.sendKeys(password1, Keys.ENTER);
         Thread.sleep(5000);
         driver.get("https://www.instagram.com/haluk.ural/");
         Thread.sleep(5000);
