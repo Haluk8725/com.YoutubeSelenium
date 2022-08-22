@@ -4,12 +4,16 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
 
 public class CallfriendTExt {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException, IOException {
+        FileWriter writer=new FileWriter("C:\\Users\\haluk\\Desktop\\Takipci.txt");
+
         Scanner input=new Scanner(System.in);
         System.out.println("Please give your password");
         String password1=input.next();
@@ -34,7 +38,6 @@ public class CallfriendTExt {
         String result = driver.findElement(By.xpath("//span[@title=\"57\"]")).getText();
         System.out.println(result);
         int elementsize = 0;
-
         List<WebElement> elements;
         while (true) {
             js.executeScript("arguments[0].scrollBy(0,arguments[0].scrollHeight)", scroll);
@@ -47,7 +50,10 @@ public class CallfriendTExt {
         for (WebElement element : elements) {
             System.out.println(a + "-" + element.getText());
             a++;
+            writer.write(element.getText()+"\n");
         }
+        writer.close();
+        driver.close();
     }
 }
 
