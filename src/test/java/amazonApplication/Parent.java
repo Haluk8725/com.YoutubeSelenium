@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class Parent {
-    WebDriver driver;
+     WebDriver driver;
     @BeforeAll
     public void setUp(){
         WebDriverManager.chromedriver().setup();

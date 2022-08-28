@@ -10,7 +10,7 @@ public class SearchBox extends Main{
         super(driver);
     }
 
-    public void search(String text){
+    public void search (String text){
         type(searchBoxLocator,text);
         click(submitButtonLocator);
 

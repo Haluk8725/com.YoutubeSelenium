@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Order;
 
 public class Test_Add_Product_to_Cart extends Parent  {
-    Homepage homePage=new Homepage(driver);;
+    Homepage homePage=new Homepage(driver);
     ProductsPage productPage= new ProductsPage(driver);
     ProductDetailPage productDetailPage= new ProductDetailPage(driver);
     CartPage cartPage= new CartPage(driver);

@@ -7,7 +7,8 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 public class Main {
-    WebDriver driver;
+
+  WebDriver driver;
 
     public Main(WebDriver driver) {
         this.driver = driver;
