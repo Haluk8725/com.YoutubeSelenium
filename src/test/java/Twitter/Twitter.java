@@ -1,4 +1,4 @@
-package İnstagram;
+package Twitter;
 
 import Utilities.ConfigurationReader;
 import Utilities.WebDriverFactory;
